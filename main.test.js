@@ -7,8 +7,11 @@ const isValidSecondary = require('./is-valid-secondary.js');
 describe('colorCombinator', () => {
   it(`returns the combination of the two given colors`, () => {
     expect(colorCombinator('red', 'yellow')).toBe('orange')
+    expect(colorCombinator('yellow', 'red')).toBe('orange')
     expect(colorCombinator('red', 'blue')).toBe('purple')
+    expect(colorCombinator('blue', 'red')).toBe('purple')
     expect(colorCombinator('yellow', 'blue')).toBe('green')
+    expect(colorCombinator('blue', 'yellow')).toBe('green')
   })
 })
 
